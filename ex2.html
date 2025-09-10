@@ -31,20 +31,15 @@
     <button onclick="changeShape()">Make a change!</button>
 
     <script>
-        var sqaure =true;
-        
+
+        var square =true;
+
        // add code here
-       function changeShape(){
-            if(sqaure){
-                var div = document.getElementById("div1");
-                div.id = "div2"
-                sqaure = false;
-            } else{
-                var div = document.getElementById("div2")
-                div.id = "div1"
-                sqaure = true;
-            }
-       }
+    function changeShape() {
+        var div = document.getElementById(square ? "div1" : "div2");
+        div.id = square ? "div2" : "div1";
+        square = !square; // toggle boolean
+    }
     </script>
 
 </body>
